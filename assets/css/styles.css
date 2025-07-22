@@ -3,7 +3,6 @@
 :root {
   --border-radius: 20px;
   --paragraph-font-size: 16px;
-  --align: center;
   --paragraph-line-height: 1.2;
   --paragraph-color: rgb(103, 103, 103);
   --margin-bottom: 20px;
@@ -29,7 +28,9 @@ body {
   transition: all 0.3s ease;
 }
 
-.card-container:hover {
+.card-container:hover,
+.card-container:focus,
+.card-container:active {
   scale: 1.05;
   box-shadow: 0px 0px 5px 6px var(--svg-fill);
 }
@@ -40,14 +41,15 @@ body {
 
 .card-header {
   display: flex;
-  align-items: var(--align);
-  justify-content: var(--align);
+  align-items: center;
+  justify-content: center;
   margin-bottom: var(--margin-bottom);
   gap: 10px;
 }
 
 p {
   font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
 }
 
 .card-header p {
@@ -77,27 +79,25 @@ p {
   margin-bottom: var(--margin-bottom);
   display: flex;
   flex-direction: column;
-  align-items: var(--align);
-  justify-content: var(--align);
+  align-items: center;
   gap: var(--margin-bottom);
 }
 
 .card-content h1 {
   font-size: 40px;
   font-weight: 700;
-  text-align: var(--paragraph-align);
 }
 
 .card-content p {
-  text-align: var(--align);
-  color: var(--paragraph-color);
+  text-align: center;
   line-height: 1.2;
+  color: var(--paragraph-color);
 }
 
 .card-button {
   display: flex;
-  align-items: var(--align);
-  justify-content: var(--align);
+  align-items: center;
+  justify-content: center;
 }
 
 .card-button a {
@@ -129,9 +129,8 @@ p {
 }
 
 .card-footer-list {
-  /* padding: 20px 40px; */
   display: flex;
-  align-items: var(--align);
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
@@ -139,8 +138,8 @@ p {
 
 .card-footer-item {
   display: flex;
-  align-items: var(--align);
-  justify-content: var(--align);
+  align-items: center;
+  justify-content: center;
   gap: 15px;
   color: white;
   height: 100%;
@@ -158,11 +157,7 @@ p {
 .card-footer-soc-info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-}
-
-.card-footer-soc-info p {
-  font-size: var(--paragraph-font-size);
+  align-items: center;
 }
 
 .card-footer-soc-info p:first-child {
