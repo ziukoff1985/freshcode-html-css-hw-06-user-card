@@ -23,7 +23,7 @@ body {
   margin: 50px auto;
   background-color: #ffffff;
   border-radius: var(--border-radius);
-  box-shadow: 0px 0px 5px 6px var(--svg-fill);
+  box-shadow: 0px 0px 6px 6px var(--svg-fill);
   transition: all 0.3s ease;
 }
 
