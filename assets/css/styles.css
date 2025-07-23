@@ -5,7 +5,7 @@
   --paragraph-font-size: 14px;
   --paragraph-line-height: 1.2;
   --paragraph-color: rgb(103, 103, 103);
-  --margin-bottom: 20px;
+  --gap: 20px;
   --svg-fill: rgb(211, 105, 67);
 }
 
@@ -36,13 +36,16 @@ body {
 
 .card {
   padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
 }
 
 .card-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--margin-bottom);
   gap: 10px;
 }
 
@@ -62,7 +65,7 @@ p {
 .card-foto {
   width: 200px;
   height: 200px;
-  margin: 0 auto var(--margin-bottom);
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
   border: 7px solid rgb(34, 47, 82);
@@ -75,11 +78,10 @@ p {
 }
 
 .card-content {
-  margin-bottom: var(--margin-bottom);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--margin-bottom);
+  gap: var(--gap);
 }
 
 .card-content h1 {
